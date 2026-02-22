@@ -1,7 +1,7 @@
 export default function Map() {
   return (
     <section className="grid gap-4 lg:grid-cols-[280px_1fr]">
-      <article className="rounded-3xl bg-gradient-to-b from-blue-700 to-blue-900 p-5 text-white shadow-lg">
+      <article className="rounded-3xl bg-linear-to-b from-blue-700 to-blue-900 p-5 text-white shadow-lg">
         <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-full border-4 border-white/25 bg-white/20 text-center text-sm font-semibold">
           Foto del conductor
         </div>
