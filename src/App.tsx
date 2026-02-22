@@ -1,4 +1,5 @@
 import Map from "./components/Map";
+import Reportes from "./components/Reportes";
 
 export default function App() {
   return (
@@ -7,6 +8,7 @@ export default function App() {
         <img src="Logo.png" alt="" className="w-2/5 relative top-4 right-25" />
       </header>
       <Map />
+      <Reportes />
     </>
   );
 }
