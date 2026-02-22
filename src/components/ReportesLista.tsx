@@ -1,45 +1,25 @@
-import {
-  ExclamationTriangleIcon,
-  LockClosedIcon,
-  UserIcon,
-  ExclamationCircleIcon,
-  WrenchScrewdriverIcon,
-  CloudIcon,
-} from "@heroicons/react/24/solid";
+const reportes = [
+  { icono: "🛠️", label: "Falla mecánica" },
+  { icono: "🚧", label: "Congestionamiento" },
+  { icono: "⚠️", label: "Accidente vehicular propio" },
+  { icono: "🚨", label: "Accidente vehicular externo" },
+  { icono: "🙍", label: "Pasajero conflictivo" },
+  { icono: "🌧️", label: "Mal clima" },
+];
 
 export default function ReportesLista() {
   return (
-    <div className="grid grid-cols-4 mt-5 gap-2">
-      <div className="bg-[#0443af] flex justify-center items-center rounded-xl p-4 flex-col space-y-1 cursor-pointer hover:opacity-75 transition-all">
-        <WrenchScrewdriverIcon className="text-white w-10" />
-        <p className="text-center text-white font-bold">Falla mecanica</p>
-      </div>
-
-      <div className="bg-[#0443af] flex justify-center items-center rounded-xl p-4 flex-col space-y-1 cursor-pointer hover:opacity-75 transition-all">
-        <LockClosedIcon className="text-white w-10" />
-        <p className="text-center text-white font-bold">Congestionamiento</p>
-      </div>
-
-      <div className="bg-[#0443af] flex justify-center items-center rounded-xl p-4 flex-col space-y-1 cursor-pointer hover:opacity-75 transition-all">
-        <ExclamationTriangleIcon className="text-white w-10" />
-        <p className="text-center text-white font-bold">Accidente veicular propio</p>
-      </div>
-
-      <div className="bg-[#0443af] flex justify-center items-center rounded-xl p-4 flex-col space-y-1 cursor-pointer hover:opacity-75 transition-all">
-        <ExclamationCircleIcon className="text-white w-10" />
-        <p className="text-center text-white font-bold">Accidente veicular externo</p>
-      </div>
-
-      <div className="bg-[#0443af] flex justify-center items-center rounded-xl p-4 flex-col space-y-1 cursor-pointer hover:opacity-75 transition-all">
-        <UserIcon className="text-white w-10" />
-        <p className="text-center text-white font-bold">Pasajero conflictivo</p>
-      </div>
-
-      <div className="bg-[#0443af] flex justify-center items-center rounded-xl p-4 flex-col space-y-1 cursor-pointer hover:opacity-75 transition-all">
-        <CloudIcon className="text-white w-10" />
-        <p className="text-center text-white font-bold">Mal clima</p>
-      </div>
-
+    <div className="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+      {reportes.map(({ icono, label }) => (
+        <button
+          key={label}
+          className="group flex min-h-28 cursor-pointer flex-col items-center justify-center gap-2 rounded-2xl bg-blue-700 p-4 text-white shadow-md transition hover:-translate-y-0.5 hover:bg-blue-800"
+          type="button"
+        >
+          <span className="text-3xl transition group-hover:scale-110">{icono}</span>
+          <p className="text-center text-sm font-semibold">{label}</p>
+        </button>
+      ))}
     </div>
   );
 }

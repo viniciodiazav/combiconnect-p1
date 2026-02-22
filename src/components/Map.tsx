@@ -1,31 +1,37 @@
 export default function Map() {
   return (
-    <div className="m-auto max-w-4/5 grid grid-cols-[1fr_5fr] gap-2">
-      <div className="w-full min-h-full bg-[#0644b7c2] rounded-lg p-5 flex flex-col items-center">
-        <div className="bg-gray-200 text-lg font-bold text-gray-900 flex justify-center items-center text-center w-1/2 h-1/3">
+    <section className="grid gap-4 lg:grid-cols-[280px_1fr]">
+      <article className="rounded-3xl bg-gradient-to-b from-blue-700 to-blue-900 p-5 text-white shadow-lg">
+        <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-full border-4 border-white/25 bg-white/20 text-center text-sm font-semibold">
           Foto del conductor
         </div>
-        <div className="w-full mt-5 text-lg space-y-2 text-gray-900">
+
+        <div className="mt-5 space-y-4 text-sm">
           <div>
-            <p className="font-bold">
-              Nombre: <span className="font-normal">Juan</span>
-            </p>
-            <p className="font-bold">
-              Apellido: <span className="font-normal">Perez</span>
-            </p>
+            <p className="text-blue-100">Nombre del conductor</p>
+            <p className="text-lg font-semibold">Juan Pérez</p>
           </div>
-          <div>
-            <p className="text-center font-bold">Número de licencia</p>
-            <p className="text-center">CDMX-C-04258937</p>
+
+          <div className="rounded-xl bg-white/10 p-3">
+            <p className="text-xs uppercase tracking-wide text-blue-100">Número de licencia</p>
+            <p className="font-medium">CDMX-C-04258937</p>
           </div>
-          <div>
-            <p className="text-center font-bold">Placas del veículo</p>
-            <p className="text-center">A-1234-Z</p>
+
+          <div className="rounded-xl bg-white/10 p-3">
+            <p className="text-xs uppercase tracking-wide text-blue-100">Placas del vehículo</p>
+            <p className="font-medium">A-1234-Z</p>
           </div>
         </div>
-      </div>
-      <section className="m-auto w-full rounded-lg bg-[#010e79] p-4 shadow-lg">
-        <div className="overflow-hidden rounded-sm border border-[#010e79]">
+      </article>
+
+      <article className="overflow-hidden rounded-3xl bg-white p-4 shadow-lg ring-1 ring-slate-200">
+        <div className="mb-3 flex items-center justify-between">
+          <h2 className="text-lg font-semibold">Ruta activa</h2>
+          <span className="rounded-full bg-emerald-100 px-3 py-1 text-xs font-medium text-emerald-700">
+            En servicio
+          </span>
+        </div>
+        <div className="overflow-hidden rounded-2xl border border-slate-200">
           <iframe
             title="Mapa de Ciudad de México"
             src="https://www.openstreetmap.org/export/embed.html?bbox=-99.3516%2C19.2200%2C-98.9415%2C19.5928&layer=mapnik&marker=19.4326%2C-99.1332"
@@ -34,7 +40,7 @@ export default function Map() {
             referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
-      </section>
-    </div>
+      </article>
+    </section>
   );
 }
