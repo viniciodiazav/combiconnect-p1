@@ -3,14 +3,16 @@ import ReportesLista from "./ReportesLista";
 
 export default function Reportes() {
   return (
-    <div className="max-w-4/5 m-auto mt-6">
-      <div className="grid grid-cols-[1.5fr_2fr] gap-2">
-        <div>
-          <p className="text-gray-900 font-bold text-3xl">Reportar</p>
-          <ReportesLista />
-        </div>
-        <Notificaciones />
-      </div>
-    </div>
+    <section className="grid gap-4 lg:grid-cols-[1.3fr_1fr]">
+      <article className="rounded-3xl bg-white p-5 shadow-lg ring-1 ring-slate-200">
+        <h2 className="text-2xl font-semibold">Reportar incidente</h2>
+        <p className="mt-1 text-sm text-slate-500">
+          Selecciona el tipo de reporte para notificar de inmediato al centro de control.
+        </p>
+        <ReportesLista />
+      </article>
+
+      <Notificaciones />
+    </section>
   );
 }
