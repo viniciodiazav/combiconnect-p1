@@ -7,7 +7,9 @@ export default function App() {
       <div className="mx-auto w-[92%] max-w-6xl">
         <header className="mb-6 rounded-3xl bg-white/95 p-4 shadow-sm ring-1 ring-slate-200 backdrop-blur">
           <div className="flex items-center justify-between gap-4">
-            <img src="Logo.png" alt="CombiConnect" className="h-16 object-contain" />
+            <div className="max-h-16 overflow-hidden">
+            <img src="Logo.png" alt="CombiConnect" className="w-100 object-contain relative -top-22 right-12" />
+            </div>
             <div className="text-right">
               <p className="text-sm font-medium text-slate-500">Panel del conductor</p>
               <p className="text-lg font-semibold">Monitoreo de viaje en tiempo real</p>
